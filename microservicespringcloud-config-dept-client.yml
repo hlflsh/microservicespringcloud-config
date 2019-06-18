@@ -4,10 +4,10 @@
      - dev
 ---
 server: 
-  port: 7001
+  port: 8001
 
 spring: 
-  profiles: dev           #开发环境
+  profiles: dev                                             # 开发环境
   application: 
     name: microservicespringcloud-config-dept-client
   datasource: 
@@ -41,13 +41,16 @@ info:
   company.name: www.atguigu.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
+  
+logging: 
+  level: 
+    com.atguigu.springcloud.dao: DEBUG						# 日志的方式打印和格式化sql
 ---
-
 server: 
-  port: 7001
+  port: 8001
 
 spring: 
-  profiles: test           #开发环境
+  profiles: test                                            # 测试环境
   application: 
     name: microservicespringcloud-config-dept-client
   datasource: 
@@ -81,3 +84,7 @@ info:
   company.name: www.atguigu.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
+  
+logging: 
+  level: 
+    com.atguigu.springcloud.dao: DEBUG						# 日志的方式打印和格式化sql
